@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PLANTIF'Y - Login Page</title>
+    <style>
+      body {
+  background-color: #C6E0B4;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #2E6B37;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #2E6B37;
+  margin-top: 0;
+}
+
+label {
+  font-size: 1.2rem;
+  color: #2E6B37;
+  margin-right: 2rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: 1rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 0.5rem 3.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #2E6B37;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  cursor: pointer;
+display: block;
+margin: 0 auto;
+
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}
+
+.signup-message {
+  font-size: 1.2rem;
+  color: #2E6B37;
+  margin-top: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #2E6B37;
+}
+
+.nav-container {
+          background-color: #fff;
+          border-bottom: 1px solid #22722F;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+      }
+      
+      nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+      }
+      
+      nav li {
+          margin-right: 20px;
+      }
+      
+      nav a {
+          display: block;
+          padding: 10px;
+          color: #22722F;
+          text-decoration: none;
+          font-weight: bold;
+          text-transform: uppercase;
+      }
+      
+      nav a:hover {
+          background-color: #22722F;
+          color: #fff;
+      }
+      .button-container {
+display: flex;
+text-align: center;
+justify-content: center;
+margin-top: 1rem;
+top:50%;
+right:90%;
+}
+button{
+margin-left:auto;
+margin-right:auto;
+}
+nav a:hover {
+background-color: #22722F;
+color: #fff;
+transform: scale(1.2);
+transition: transform 0.2s ease-in-out;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="leaf-container">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div>
+    
+    <header>
+      <div class="nav-container">
+          <nav>
+              <ul>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="/aboutus">ABOUT US</a></li>
+                  <li><a href="/documentation">DOCUMENTATION</a></li>
+                  <li><a href="#">LOGIN</a></li>
+                  <li><a href="/signup">SIGN-UP</a></li>
+                  <!-- <li><a href="/upload">UPLOAD</a></li> -->
+              </ul>
+          </nav>
+      </div>
+
+    <div class="container">
+      <div class="logo">
+        <h1>PLANTIF'Y</h1>
+      </div>
+      <div class="image-container">
+        <img src="https://drive.google.com/uc?id=1k_p9mXY6-XpRd5EStFLQh_rj-pW3h7sP" />
+      </div>
+      <h3>
+        Please fill up the given details below.
+        If you are a first-time user, please sign up using the button below.
+      </h3>
+      <form method="post" action="http://127.0.0.1:5000/login">
+      <div class="form-group">
+        <label>Username:</label>
+        <input type="text" name="un"/>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" name="pw" />
+      </div>
+      <button>Login</button>
+      <div class="signup-message">
+        <button><a href="/signup">Don't have an account? Sign up now!</a></button>
+      </div>
+    </div>
+  </form>
+    <script>
+      const container = document.getElementById("leaf-container");
+     const colors = ["#6b8e23", "#556b2f", "#228b22", "#2e8b57", "#8fbc8f", "#9acd32"];
+    const loginButton = document.getElementById("login-button");
+
+function createLeaf() {
+  const leaf = document.createElement("div");
+  leaf.classList.add("leaf");
+  leaf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+  leaf.style.left = Math.random() * 100 + "%";
+  container.appendChild(leaf);
+  setTimeout(() => {
+    container.removeChild(leaf);
+  }, 3000);
+}
+
+loginButton.addEventListener("click", () => {
+  for (let i = 0; i < 10; i++) {
+    setTimeout(createLeaf, i * 200);
+  }
+});
+
+    </script>
+  </body>
+</html>

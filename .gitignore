@@ -179,3 +179,14 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/python
 Chat
 Send a message to LINER Chat
+test.py
+Plantify.h5
+db.csv
+daisy.jpeg
+dandelion.PNG 
+r.jpg 
+sunflowe.jpg 
+tulip.jpg
+notebooks/Plantify.zip
+.breakpoints
+pyproject.toml

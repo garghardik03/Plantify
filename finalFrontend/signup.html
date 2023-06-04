@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            background-image: url("https://drive.google.com/uc?id=1_tFdq-sbCN7Lj_cXkYb6SN5ezzFF2q5_");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #008080 ;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #008080;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 2px;
+            border-radius: 1px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .gender {
+
+            width: 100%;
+            padding: 2px;
+            border-radius: 1px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        button[type="submit"] {
+            background-color: #008080;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #006666;
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .field-wrapper {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .field-wrapper label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #008080;
+        }
+
+        .field-wrapper input[type="radio"] {
+            margin-top: 10px;
+        }
+
+        .plant-image {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .nav-container {
+            background-color: #fff;
+            border-bottom: 1px solid #22722F;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px;
+            color: #22722F;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            background-color: #22722F;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/dboutus">ABOUT US</a></li>
+                    <li><a href="/documentation">DOCUMENTATION</a></li>
+                    <li><a href="/login">LOGIN</a></li>
+                    <li><a href="/signup">SIGN-UP</a></li>
+                    <!-- <li><a href="/upload">UPLOAD</a></li> -->
+                </ul>
+            </nav>
+        </div>
+        <form method="post" action="http://127.0.0.1:5000/signup">
+            <div class="form-wrapper">
+                <h1>Sign Up Form</h1>
+                <div class="field-wrapper">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="fname">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="lname">
+                    <label for="user-name">Username:</label>
+                    <input type="text" id="user-name" name="un">
+                </div>
+                <label for="email">Email-ID:</label>
+                <input type="text" id="email" name="email_id">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone_no">
+                <div class="field-wrapper">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="pw">
+                    <label for="re-enter-password">Re-enter Password:</label>
+                    <input type="password" id="re-enter-password" name="repw">
+                </div>
+                <label for="how-know">How did you get to know about our website?</label>
+                <textarea id="how-know" rows="2" name="how_know"></textarea>
+                <!-- <button type="submit" name="submit">Register</button> -->
+                <button type="submit">Register</button>
+            </div>
+        </form>
+</body>
+
+</html>

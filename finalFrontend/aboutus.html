@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Us Page</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .column {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #1a6137;
+        color: white;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: grey;
+      }
+
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .button:hover {
+        background-color: #555;
+      }
+
+      .animate-top {
+        position: relative;
+        animation: animatetop 0.4s;
+      }
+
+      .animate-bottom {
+        position: relative;
+        animation: animatebottom 0.4s;
+      }
+
+      @keyframes animatetop {
+        from {
+          top: -50px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
+
+      @keyframes animatebottom {
+        from {
+          bottom: -50px;
+          opacity: 0;
+        }
+        to {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes leafy {
+  0% {
+    transform: rotate(0deg) translateX(0) translateY(0);
+  }
+  10% {
+    transform: rotate(-5deg) translateX(5px) translateY(-2px);
+  }
+  20% {
+    transform: rotate(5deg) translateX(-5px) translateY(2px);
+  }
+  30% {
+    transform: rotate(-5deg) translateX(5px) translateY(-2px);
+  }
+  40% {
+    transform: rotate(5deg) translateX(-5px) translateY(2px);
+  }
+  50% {
+    transform: rotate(-5deg) translateX(5px) translateY(-2px);
+  }
+  60% {
+    transform: rotate(0deg) translateX(0) translateY(0);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0) translateY(0);
+  }
+}
+
+
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+      .nav-container {
+                background-color: #fff;
+                border-bottom: 1px solid #22722F;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+            }
+            
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            
+            nav li {
+                margin-right: 20px;
+            }
+            
+            nav a {
+                display: block;
+                padding: 10px;
+                color: #22722F;
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            
+            nav a:hover {
+                background-color: #22722F;
+                color: #fff;
+            }
+
+  
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+          <nav>
+              <ul>
+                  <li><a href="/">HOME</a></li>
+                  <li><a href="#">ABOUT US</a></li>
+                  <li><a href="/documentation">DOCUMENTATION</a></li>
+                  <li><a href="/login">LOGIN</a></li>
+                  <li><a href="/signup">SIGN-UP</a></li>
+                  <!-- <li><a href="/upload">UPLOAD</a></li> -->
+              </ul>
+          </nav>
+      </div>
+    <div class="about-section">
+      <center>
+        <h1><b>ABOUT US</b></h1>
+      </center>
+      <br>
+    </div>
+
+    <h2 style="text-align:center">Our Team</h2>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="https://drive.google.com/uc?id=1YIzVZ8B2gSFvmJ2eNez--NWm-Wq-vxEo" alt="Jane" style="width:100%">
+          <div class="container">
+            <h2>Saksham Arora</h2>
+            <p class="title">Member</p>
+            <p>Hi guys! my name is saksham and i helped in creation of front end design component of this website hope you all will enjoy this.For more information you can contact me through the mail id geiven below</p>
+            <p>sarora_be21@thapar.edu</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="column">
+        <div class="card">
+          <img src="https://drive.google.com/uc?id=1RFUNgsajw-J4OfuoAgOO3tcytltvQ1Aa" alt="Mike" style="width:100%">
+          <div class="container">
+            <h2>Ikjot singh</h2>
+            <p class="title">Member</p>
+            <p>Hello everyone my name is ikjot and i helped in creating the back-end of this website from the username to the login page. For more information you can contact me through the mail id geiven below.</p>
+            <p>isingh_be21@thapar.edu</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="card">
+          <img src="https://drive.google.com/uc?id=1aTaQh0s5NYWaRGiTM5P38qRgLqYARbh5" alt="John" style="width:100%">
+          <div class="container">
+            <h2>Hardik garg</h2>
+            <p class="title">Member</p>
+            <p>hi everyone my name is hardik and i helped in creation of the machine learning part and functionality. For more information you can contact me through the mail id geiven below</p>
+            <p>hgarg_be21@thapar.edu</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <img src="https://drive.google.com/uc?id=1Q2mYvjn0zq1rCqEQIzjkhmJfrRTRbDNL" alt="John" style="width:100%">
+          <div class="container">
+            <h2>Kritish Narula</h2>
+            <p class="title">Member</p>
+            <p>Hi everyone i am kritish and i helped in creation of the main functionality and testing.For more information you can contact me through the mail id geiven below</p>
+            <p>knarula_be21@thapar.edu</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
