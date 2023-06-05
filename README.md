@@ -12,6 +12,18 @@ Welcome to the Plantify! This software utilizes Convolutional Neural Network (CN
 - Documentation: Users can access documentation or user guides for additional information on how to use the software effectively.
 - About Us: This page provides information about the software, its development team, and any other relevant details.
 
+## Installation
+To run the backend, please follow the below steps: Install pipenv using pip install pipenv.
+Then in the folder, run the following commands:
+
+pipenv install
+pipenv run python initial-nlp-libraries.py 
+This would install the libraries required with NLTK to the nltk_data directory.
+
+Now run the following commands:
+
+pipenv run python -m app
+The server should now be up and running on localhost:5100.
 
 ## Usage
 1. Register a new account by navigating to the signup page and providing the required information.
@@ -34,8 +46,8 @@ This plant detection software was developed by the following contributors:
 
 - Hardik Garg (garg2003hardik@gmail.com)
 - Ikjot Singh (ikjotsingh2214@gmail.com)
-- Saksham Arora ()
-- Kritish Narula ()
+- Saksham Arora (isakshamarora@gmail.com)
+- Kritish Narula (knarula2003@gmail.com)
 
 Please contact us if you have any questions or suggestions for improving the software.
 
