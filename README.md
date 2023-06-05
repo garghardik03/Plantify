@@ -14,11 +14,6 @@ Welcome to the Plantify! This software utilizes Convolutional Neural Network (CN
 
 ## Installation
 To run the backend, please follow the below steps: Install pipenv using pip install pipenv.
-Then in the folder, run the following commands:
-
-pipenv install
-pipenv run python initial-nlp-libraries.py 
-This would install the libraries required with NLTK to the nltk_data directory.
 
 Now run the following commands:
 
